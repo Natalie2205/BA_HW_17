@@ -48,7 +48,7 @@ body {
     font-family: v.$lato-font-family;
     text-transform: uppercase;
     font-size: 14px;
-    letter-spacing: 30%;
+    letter-spacing: 0.3em;
     font-weight: 400;
     color: #000;
     text-decoration: none;
@@ -75,4 +75,24 @@ body {
             }
         }
   }
+}
+
+.hero {
+    width: 100%;
+    height: 600px;
+    padding-top: 100px;
+    background: url('../assets/img/bg_image.png') center / cover no-repeat;
+}
+
+.title_1 {
+    max-width: 770px;
+}
+
+.title {
+    font-family: v.$red-hat-font-family;
+    color: #000;
+
+    &_1 {
+        @include m.font_title(3rem, 1.33, 600, 0.05em);
+    }
 }

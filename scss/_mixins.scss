@@ -1,7 +1,8 @@
-@mixin font_title($fontSize, $linHeight, $fontweight) {
+@mixin font_title($fontSize, $linHeight, $fontWeight, $letSpacing) {
     font-size: $fontSize;
     line-height: $linHeight;
-    font-weight: $fontweight;
+    font-weight: $fontWeight;
+    letter-spacing: $letSpacing;
 }
 
 @mixin flex($justify, $align) {
