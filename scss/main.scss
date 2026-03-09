@@ -1,0 +1,78 @@
+@use "fonts";
+@use "vars" as v;
+// @use "extends";
+@use "mixins" as m;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  @include m.flex(space-between, center);
+  gap: 30px;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.menu {
+  @include m.flex(flex-end, center);
+  gap: 2.91vw;
+  padding: 0 3.75vw;
+
+  &__link {
+    font-family: v.$lato-font-family;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 30%;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+
+    position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 0;
+            background-color: #000;
+            transition: all 0.4s;
+            opacity: 0;           
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                width: 72%;                
+            }
+        }
+  }
+}
