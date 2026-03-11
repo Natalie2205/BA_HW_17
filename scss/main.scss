@@ -19,6 +19,7 @@ html,
 body {
   font-size: 16px;
   color: #565656;
+  font-family: v.$lato-font-family;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -106,8 +107,13 @@ a {
   }
 
   &_3 {
+    font-family: v.$red-hat-semibold-font-family;
+    @include m.font_title(1.75rem, 1.67, 600, 0.1em);
+  }
+
+  &_4 {
     font-family: v.$red-hat-medium-font-family;
-    @include m.font_title(1.44rem, 1.67, 500, 0.1em);
+    @include m.font_title(1.38rem, 1.67, 500, 0.1em);
   }
 }
 
@@ -120,7 +126,6 @@ a {
 
   &__descr {
     flex-grow: 1;
-    font-family: v.$lato-font-family;
     @include m.font_title(1rem, 1.67, 400, 0.1em);
   }
 
@@ -136,6 +141,10 @@ a {
     @include m.font_title(1rem, 1.67, 400, 0.1em);
     color: #7b7b7b;
     margin-bottom: 30px;
+  }
+  &__title {
+    font-family: v.$red-hat-medium-font-family;
+    @include m.font_title(1.44rem, 1.67, 500, 0.1em);
   }
 
   &__date {
@@ -157,4 +166,45 @@ a {
 
 .flex-reverse {
   flex-direction: row-reverse;
+}
+
+.posts {
+  margin-top: 90px;
+}
+
+.flex-heading {
+  @include m.flex(space-between, center);
+}
+
+.heading {
+  &__text {
+    display: inline-block;
+    color: #7b7b7b;
+    @include m.font_title(1rem, 1.67, 400, 0.1em);
+  }
+}
+
+.post {
+  margin-top: 50px;
+  align-self: start;
+
+  &__img {
+    margin-bottom: 25px;
+  }
+
+  &__heading {
+    @include m.font_title(0.75rem, 1.67, 400, 0.1em);
+    color: #7b7b7b;
+    margin-bottom: 25px;
+  }
+
+  &__sup-title {
+    font-weight: 400;
+  }
+
+  &__text {
+    line-height: 1.67;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+  }
 }
