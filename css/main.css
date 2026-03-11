@@ -28,6 +28,15 @@
   font-weight: 600;
   font-style: normal;
 }
+.btn {
+  padding: 10px 45px;
+  background: #565656;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Lato Bold", sans-serif;
+  border: 1px solid #565656;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -149,7 +158,7 @@ a {
 }
 
 .blog {
-  padding: 90px 0;
+  padding-top: 90px;
 }
 
 .article {
@@ -243,4 +252,36 @@ a {
   line-height: 1.67;
   letter-spacing: 0.05em;
   margin-top: 20px;
+}
+
+.popular {
+  margin-top: 90px;
+  position: relative;
+}
+.popular__img {
+  margin-bottom: 20px;
+}
+.popular__heading {
+  margin-bottom: 20px;
+}
+.popular__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 1rem;
+  line-height: 1.67;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+.btn:hover {
+  color: #565656;
+  background: #fff;
+  border: 1px solid #7b7b7b;
 }/*# sourceMappingURL=main.css.map */
