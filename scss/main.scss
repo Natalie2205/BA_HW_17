@@ -22,7 +22,8 @@ body {
   font-family: v.$lato-font-family;
 }
 
-a {
+a,
+button {
   cursor: url("../assets/img/cursor.svg"), pointer;
 }
 
@@ -168,7 +169,6 @@ a {
   flex-direction: row-reverse;
 }
 
-
 .flex-heading {
   @include m.flex(space-between, center);
 }
@@ -207,7 +207,7 @@ a {
 }
 
 .popular {
-    position: relative;
+  position: relative;
 
   &__img {
     margin-bottom: 20px;
@@ -261,7 +261,7 @@ a {
   }
 
   &__text {
-     @include m.font(1.19rem, 1.68, 400, 0.05em);
+    @include m.font(1.19rem, 1.68, 400, 0.05em);
   }
 }
 
@@ -269,4 +269,53 @@ a {
   @include m.flex(space-between, start);
   flex-direction: column;
   gap: 35px;
+}
+
+.footer {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background: #f4f4f4;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    color: #000;
+    @include m.font(1rem, 1.67, 400, 0.1em);
+  }
+
+  &__info:first-of-type {
+    margin-bottom: 15px;
+  }
+}
+.social {
+  @include m.flex(center, center);
+  gap: 23px;
+
+  &__link {
+    @include m.flex(center, center);
+    width: 50px;
+    height: 50px;
+    border: 1px solid #565656;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #565656;
+    }
+
+    &:hover .social__icon {
+      fill: #fff;
+    }
+  }
+
+  &__icon {
+    fill: #565656;
+  }
+}
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+  @include m.font(1rem, 1.67, 400, 0.1em);
 }
