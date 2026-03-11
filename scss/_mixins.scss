@@ -1,4 +1,4 @@
-@mixin font_title($fontSize, $linHeight, $fontWeight, $letSpacing) {
+@mixin font($fontSize, $linHeight, $fontWeight, $letSpacing) {
     font-size: $fontSize;
     line-height: $linHeight;
     font-weight: $fontWeight;

@@ -99,26 +99,26 @@ a {
   color: #000;
 
   &_1 {
-    @include m.font_title(3rem, 1.33, 600, 0.05em);
+    @include m.font(3rem, 1.33, 600, 0.05em);
   }
 
   &_2 {
-    @include m.font_title(3rem, 1.33, 400, 0.05em);
+    @include m.font(3rem, 1.33, 400, 0.05em);
   }
 
   &_3 {
     font-family: v.$red-hat-semibold-font-family;
-    @include m.font_title(1.75rem, 1.67, 600, 0.1em);
+    @include m.font(1.75rem, 1.67, 600, 0.1em);
   }
 
   &_4 {
     font-family: v.$red-hat-medium-font-family;
-    @include m.font_title(1.38rem, 1.67, 500, 0.1em);
+    @include m.font(1.38rem, 1.67, 500, 0.1em);
   }
 }
 
-.blog {
-  padding-top: 90px;
+.section {
+  margin-top: 90px;
 }
 
 .article {
@@ -126,7 +126,7 @@ a {
 
   &__descr {
     flex-grow: 1;
-    @include m.font_title(1rem, 1.67, 400, 0.1em);
+    @include m.font(1rem, 1.67, 400, 0.1em);
   }
 
   &__box {
@@ -138,13 +138,13 @@ a {
   }
 
   &__sup-title {
-    @include m.font_title(1rem, 1.67, 400, 0.1em);
+    @include m.font(1rem, 1.67, 400, 0.1em);
     color: #7b7b7b;
     margin-bottom: 30px;
   }
   &__title {
     font-family: v.$red-hat-medium-font-family;
-    @include m.font_title(1.44rem, 1.67, 500, 0.1em);
+    @include m.font(1.44rem, 1.67, 500, 0.1em);
   }
 
   &__date {
@@ -168,9 +168,6 @@ a {
   flex-direction: row-reverse;
 }
 
-.posts {
-  margin-top: 90px;
-}
 
 .flex-heading {
   @include m.flex(space-between, center);
@@ -180,7 +177,7 @@ a {
   &__text {
     display: inline-block;
     color: #7b7b7b;
-    @include m.font_title(1rem, 1.67, 400, 0.1em);
+    @include m.font(1rem, 1.67, 400, 0.1em);
   }
 }
 
@@ -193,7 +190,7 @@ a {
   }
 
   &__heading {
-    @include m.font_title(0.75rem, 1.67, 400, 0.1em);
+    @include m.font(0.75rem, 1.67, 400, 0.1em);
     color: #7b7b7b;
     margin-bottom: 25px;
   }
@@ -210,8 +207,7 @@ a {
 }
 
 .popular {
-  margin-top: 90px;
-  position: relative;
+    position: relative;
 
   &__img {
     margin-bottom: 20px;
@@ -229,10 +225,7 @@ a {
 
 .btn {
   @extend %btn;
-  @include m.font_title(1rem, 1.67, 700, 0.1em);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  @include m.font(1rem, 1.67, 700, 0.1em);
   margin-top: 50px;
   transition: all 0.5s;
 
@@ -241,4 +234,39 @@ a {
     background: #fff;
     border: 1px solid #7b7b7b;
   }
+}
+
+.flex-btn {
+  @include m.flex(center, center);
+}
+
+.flex-info {
+  @include m.flex(space-between, start);
+}
+
+.info {
+  margin-bottom: 90px;
+
+  &__title {
+    @include m.font(1.44rem, 1.67, 400, 0.1em);
+    margin-bottom: 20px;
+  }
+
+  &__arrow {
+    margin-left: 0;
+  }
+
+  &__side {
+    max-width: 470px;
+  }
+
+  &__text {
+     @include m.font(1.19rem, 1.68, 400, 0.05em);
+  }
+}
+
+.flex-side {
+  @include m.flex(space-between, start);
+  flex-direction: column;
+  gap: 35px;
 }

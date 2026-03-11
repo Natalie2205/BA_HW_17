@@ -157,8 +157,8 @@ a {
   letter-spacing: 0.1em;
 }
 
-.blog {
-  padding-top: 90px;
+.section {
+  margin-top: 90px;
 }
 
 .article {
@@ -211,10 +211,6 @@ a {
   flex-direction: row-reverse;
 }
 
-.posts {
-  margin-top: 90px;
-}
-
 .flex-heading {
   display: flex;
   justify-content: space-between;
@@ -255,7 +251,6 @@ a {
 }
 
 .popular {
-  margin-top: 90px;
   position: relative;
 }
 .popular__img {
@@ -274,9 +269,6 @@ a {
   line-height: 1.67;
   font-weight: 700;
   letter-spacing: 0.1em;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   margin-top: 50px;
   transition: all 0.5s;
 }
@@ -284,4 +276,47 @@ a {
   color: #565656;
   background: #fff;
   border: 1px solid #7b7b7b;
+}
+
+.flex-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.info {
+  margin-bottom: 90px;
+}
+.info__title {
+  font-size: 1.44rem;
+  line-height: 1.67;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+.info__arrow {
+  margin-left: 0;
+}
+.info__side {
+  max-width: 470px;
+}
+.info__text {
+  font-size: 1.19rem;
+  line-height: 1.68;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.flex-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  gap: 35px;
 }/*# sourceMappingURL=main.css.map */
