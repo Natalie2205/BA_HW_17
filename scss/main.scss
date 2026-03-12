@@ -40,10 +40,19 @@ button {
 
 .header {
   padding: 40px 0;
+
+  @media screen and (max-width: 768px) {
+        padding: 20px 0;
+    }
 }
 
 .nav {
   flex-grow: 1;
+
+  @media screen and (max-width:768px) {
+        order: 2;
+        flex-grow: 0;
+    }
 }
 
 .menu {
@@ -51,7 +60,29 @@ button {
   gap: 2.91vw;
   padding: 0 3.75vw;
 
-  &__link {
+  @media screen and (max-width: 768px) {
+        position: absolute;
+        right: -100%;
+        top: 65px;
+        opacity: 0;
+        flex-direction: column;
+        background-color: #97cbca;
+        padding: 0 0;
+        transition: all 0.5s;
+        width: 100%;
+        gap: 0;
+    }
+  
+  &__item {
+
+        @media screen and (max-width: 768px) {
+            padding: 20px 0;
+            border-bottom: 1px solid #fff;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__link {
     font-family: v.$lato-font-family;
     text-transform: uppercase;
     font-size: 14px;
@@ -82,6 +113,59 @@ button {
       }
     }
   }
+}
+
+.burger {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        &:checked~.menu {
+            opacity: 1;
+            right: 0;
+        }
+
+        &:checked~.burger__img {
+            transform: rotate(587deg);
+            transition: all 0.4s;
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__img {
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+            display: inline-block;
+            position: relative;
+            top: -3px;
+            width: 34px;
+            height: 2px;
+            background-color: #292729;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #292729;
+                top: 10px;
+            }
+
+            &::after {
+                top: -10px;
+            }
+        }
+    }
 }
 
 .hero {
